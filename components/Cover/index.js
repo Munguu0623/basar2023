@@ -27,7 +27,6 @@ export default function Cover(second) {
               Амьтад хайртай бүх хүнд зориулагдсан
               <div class="  text-btnOrange">цогц флатпорм</div>
             </h1>
-
             <div className="mt-20">
               <Form action="" class="w-full mt-8">
                 <Search

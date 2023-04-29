@@ -25,23 +25,17 @@ export default function useFirebaseAuth() {
 
   const authStateChangeHandler = (authState) => {
     if (!authState) {
-      // console.log("user is not logged in");
-      // redirect the user to index page
       setAuthUser(null);
       setLoading(false);
-      // also clear out cookies if you want
-      //   router.push("/");
     } else {
-      // console.log("welcome back");
-      // also set  cookies if you want
-      console.log(authState);
+      console.log(authState, "eeeee");
       setAuthUser({
         uid: authState.uid,
         email: authState.email,
         username: authState.displayName,
         photoURL: authState.photoURL,
       });
-      router.push("/");
+      // router.push("/");
       setLoading(false);
     }
   };

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="h-32rem w-full hidden lg:block font-Robohref text-xs">
+    <footer className="h-32rem  w-full hidden lg:block font-Robohref text-xs">
       <div className="flex justify-center items-center space-x-12 h-32 w-full bg-gradient-to-r  from-[#EFAB3E] to-[#ff834f] text-white">
         <div className="text-xl font-light">
           ЦАГ АЛДАЛГҮЙ МЭДЭЭЛЭЛ{" "}
@@ -21,7 +21,7 @@ const Footer = () => {
           </buthrefn>
         </div>
       </div>
-      <div className="h-full p-8 mx-auhref max-w-7xl flex justify-center items-center">
+      <div className="h-full p-8 mx-auto mx-auhref max-w-7xl flex justify-center items-center">
         <div className="grid grid-cols-6 xl:pl-14 py-6 text-[#2B363F] ">
           <div className="w-52">
             <div className="font-medium border-orange-500 border-l-2 pl-1 mb-2">
@@ -258,7 +258,7 @@ const Footer = () => {
       </div>
 
       <div className="h-11 w-full bg-[#657C93] text-white text-[12px]  ">
-        <div className="flex max-w-7xl items-center justify-between mx-auhref py-1 p-4">
+        <div className="flex max-w-7xl  mx-auto items-center justify-between mx-auhref py-1 p-4">
           <p>All reserved by @basarmn</p>
           <ul className="flex">
             <li className="mx-6 my-2">

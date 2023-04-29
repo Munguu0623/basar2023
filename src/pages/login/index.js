@@ -29,6 +29,7 @@ export default function Login(second) {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, provider);
+      router.push("/");
     } catch (error) {
       console.error("An error occured", error);
     }
@@ -36,6 +37,7 @@ export default function Login(second) {
   const signInWithFacebook = async () => {
     try {
       await signInWithPopup(auth, fbProvider);
+      router.push("/");
     } catch (error) {
       console.error("An error occured", error);
     }
@@ -46,7 +48,16 @@ export default function Login(second) {
       return message.warning("И-мейл нууц үгээ оруулна уу");
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      router.push("/");
     } catch (error) {
+      console.log(JSON.stringify(error));
+      if (
+        error.code == "auth/invalid-email" ||
+        error.code == "auth/wrong-password"
+      ) {
+        message.error("Нэвтрэх нэр нууц үг буруу байна");
+        // Display the modal
+      }
       console.error("An error occured", error);
     }
   };
