@@ -1,22 +1,25 @@
 import Link from "next/link";
 import Navbar from "../../../components/Layout/Navbar";
-
+import Image from "next/image";
 export default function Organization(second) {
   return (
     <>
       <Navbar>
-        <div class="py-12">
+        <div class="mt-16 md:mt-0">
+          <Image
+            className="hidden lg:flex lg:visible bg-cover  bg-top bg-fixed"
+            src="/image/partners/page_bigs.png"
+            width={1900}
+            height={100}
+          />
+          <Image
+            className="lg:hidden bg-cover bg-top bg-fixed"
+            src="/image/partners/page_smalls.png"
+            width={1900}
+            height={100}
+          />
           <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-            <div class="mb-12 space-y-2 text-center">
-              <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">
-                Бидинтэй хамтран ажилдаг байгууллагууд
-              </h2>
-              <p class="text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-6/12">
-                Quam hic dolore cumque voluptate rerum beatae et quae, tempore
-                sunt, debitis dolorum officia aliquid explicabo? Excepturi,
-                voluptate?
-              </p>
-            </div>
+            <div class="mb-12 space-y-2 text-center"></div>
 
             <Link className="" href="#">
               {" "}
@@ -35,7 +38,7 @@ export default function Organization(second) {
 
                   <div class="sm:p-2 sm:pl-0 sm:w-4/6">
                     <span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0">
-                      Jul 27 2022
+                      Mar 27 2023
                     </span>
                     <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">
                       "Сайн санаа амьтдад" ТББ
