@@ -39,7 +39,7 @@ module.exports = {
         CatColor2: "#FBF2B9",
         CatTextColor: "#FBEEA6",
         RabbitColor1: "#F7f6f9",
-        RabbitColor2: "#f4f6fa",
+        RabbitColor2: "#dedde0",
         RabbitTextColor: "#e9ecf2",
         BirdColor1: "#f7f9e1",
         BirdColor2: "#e9f4c6",

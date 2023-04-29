@@ -93,7 +93,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/organization"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Байгууллагууд</span>
@@ -144,9 +144,7 @@ export default function Navbar(props) {
 
       <Content>
         <Row justify="center" style={{ minHeight: "100vh" }}>
-          <Col className="content" span={23}>
-            {props.children}
-          </Col>
+          <Col className="content">{props.children}</Col>
         </Row>
       </Content>
       <Footer />
