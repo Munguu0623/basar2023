@@ -112,8 +112,8 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
-                        class="block md:px-4 transition hover:text-primary   font-thin "
+                        href="/organization"
+                        class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Байгууллагууд</span>
                       </Link>
@@ -159,11 +159,6 @@ export default function Navbar(props) {
                       />
                     </Dropdown>
                   ) : (
-                    // <div className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
-                    //   <span className="relative text-sm font-semibold text-black  ">
-                    //     {user.username}
-                    //   </span>
-                    // </div>
                     <Link
                       href="/login"
                       className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
@@ -182,9 +177,7 @@ export default function Navbar(props) {
 
       <Content>
         <Row justify="center" style={{ minHeight: "100vh" }}>
-          <Col className="content" span={23}>
-            {props.children}
-          </Col>
+          <Col className="content">{props.children}</Col>
         </Row>
       </Content>
       <Footer />
