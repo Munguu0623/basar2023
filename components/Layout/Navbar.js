@@ -106,7 +106,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="/"
+                        href="/ads"
                         class="block md:px-4  font-thin transition hover:text-primary dark:hover:text-primaryLight"
                       >
                         <span>Зар </span>
@@ -195,7 +195,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/ads"
               class="block md:px-4  font-thin transition hover:text-primary  "
             >
               <span>Зар </span>
