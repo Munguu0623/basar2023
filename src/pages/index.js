@@ -9,8 +9,6 @@ import BasarZar from "../../components/BasarZar";
 import AppBanner from "../../components/AppBanner";
 import Animals from "../../components/Animals";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   const { user, loading } = useAuth();
 

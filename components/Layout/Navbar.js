@@ -1,18 +1,28 @@
-import { Dropdown, Avatar, Row, Button, TreeSelect, Layout, Col } from "antd";
+import {
+  Dropdown,
+  Avatar,
+  Row,
+  Button,
+  TreeSelect,
+  Layout,
+  Col,
+  Drawer,
+} from "antd";
 const { Header, Content, Sider } = Layout;
 import Image from "next/image";
 import Footer from "./Footer";
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "../../firebase/useFireBaseAuth";
+import { FiMenu } from "react-icons/fi";
 export default function Navbar(props) {
-  const [value, setValue] = useState(false);
   const { user, loading, logOut } = useAuth();
-  console.log(user, "iusers");
-
-  const burger = () => {
-    setValue(true);
-    console.log(value, "this is click");
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
   };
 
   const items = [
@@ -36,8 +46,8 @@ export default function Navbar(props) {
           <div class="xl:container m-auto px-6 md:px-12">
             <div class="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0">
               <div class="w-full flex justify-between lg:w-auto">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   aria-label="logo"
                   class="flex space-x-2 items-center"
                 >
@@ -58,22 +68,12 @@ export default function Navbar(props) {
                       height={50}
                     />
                   </span>
-                </a>
-                <button onClick={burger}>
-                  <label
-                    for="hbr"
-                    class="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="m-auto h-0.5 w-6 rounded bg-gray-900   transition duration-300"
-                    ></div>
-                    <div
-                      aria-hidden="true"
-                      class="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900   transition duration-300"
-                    ></div>
-                  </label>
-                </button>
+                </Link>
+                <FiMenu
+                  onClick={showDrawer}
+                  size={25}
+                  className=" mt-2 cursor-pointer lg:hidden"
+                />
               </div>
               <div class="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white   lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none     lg:border-0">
                 <div class="text-gray-600   lg:pr-4">
@@ -96,7 +96,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/news"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Мэдээ</span>
@@ -174,9 +174,82 @@ export default function Navbar(props) {
           </div>
         </nav>
       </header>
-
+      <Drawer
+        title={user?.username}
+        placement="right"
+        onClose={onClose}
+        open={open}
+      >
+        <ul class="space-y-6 tracking-wide font-medium text-base   pl-8">
+          <li>
+            <Link
+              href=""
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span>Нүүр</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span>Амьтад</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/news"
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span>Мэдээ</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span>Блог</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/organization"
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span>Байгууллагууд</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              class="block md:px-4  font-thin transition hover:text-primary  "
+            >
+              <span>Зар </span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              class="block md:px-4 transition hover:text-primary   font-thin "
+            >
+              <span className="flex flex-nowrap"> Tусламж </span>
+            </Link>
+          </li>
+          <li class="block md:px-4 transition hover:text-primary   font-thin ">
+            <span onClick={logOut} className="flex flex-nowrap">
+              Гарах
+            </span>
+          </li>
+        </ul>
+      </Drawer>
       <Content>
-        <Row justify="center" style={{ minHeight: "100vh" }}>
+        <Row
+          justify="center"
+          // className="max-w-7xl mx-auto "
+          style={{ minHeight: "100vh" }}
+        >
           <Col className="content">{props.children}</Col>
         </Row>
       </Content>
