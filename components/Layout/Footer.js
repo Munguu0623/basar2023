@@ -1,7 +1,6 @@
 import React from "react";
 // import playShrefre from "../../assets/images/footer_img/playshrefre.png";
 // import appShrefre from "../../assets/images/footer_img/appshrefre.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Link from "next/link";
 

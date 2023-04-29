@@ -18,7 +18,7 @@ export default function Navbar(props) {
             <div class="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0">
               <div class="w-full flex justify-between lg:w-auto">
                 <a
-                  href="#"
+                  href="/"
                   aria-label="logo"
                   class="flex space-x-2 items-center"
                 >
@@ -61,7 +61,7 @@ export default function Navbar(props) {
                   <ul class="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Нүүр</span>
@@ -69,7 +69,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Амьтад</span>
@@ -77,7 +77,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Мэдээ</span>
@@ -85,7 +85,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLigh font-thin "
                       >
                         <span>Блог</span>
@@ -101,7 +101,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4  font-thin transition hover:text-primary dark:hover:text-primaryLight"
                       >
                         <span>Зар </span>
@@ -109,7 +109,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span className="flex flex-nowrap"> Tусламж </span>
@@ -120,7 +120,7 @@ export default function Navbar(props) {
 
                 <div class="w-full space-y-2 border-primary/10 dark:border-gray-700 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
                   <a
-                    href="#"
+                    href="/"
                     class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10 dark:focus:before:bg-primaryLight/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   >
                     <span class="relative text-sm font-semibold text-primary dark:text-primaryLight">
@@ -128,7 +128,7 @@ export default function Navbar(props) {
                     </span>
                   </a>
                   <a
-                    href="#"
+                    href="/"
                     class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary dark:before:bg-primaryLight before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   >
                     <span class="relative text-sm font-semibold text-black dark:text-gray-900">

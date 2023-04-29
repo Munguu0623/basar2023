@@ -50,7 +50,7 @@ export default function HomeBlog(second) {
             height={1000}
           />
           <Image
-            width={1200}
+            width={1900}
             height={100}
             className="  lg:hidden bg-cover bg-top bg-fixed"
             alt="postbgg"
