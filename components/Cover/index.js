@@ -50,7 +50,7 @@ export default function Cover(second) {
               </Form>
             </div>
           </div>
-          <div class="overflow-hidden w-full lg:w-7/12 lg:-mr-16 relative">
+          <div class="overflow-hidden w-full lg:w-7/12  relative">
             {/* <div className="bg-blue-500">
               <Image
                 src="/image/basar/about_answer.png"
@@ -58,9 +58,8 @@ export default function Cover(second) {
                 height={300}
               />
             </div> */}
-            <div className=" ">
+            <div className=" overflow-hidden">
               <Image
-                className=""
                 src="/image/basar/cover_basar.png"
                 alt="Picture of the author"
                 width={400}

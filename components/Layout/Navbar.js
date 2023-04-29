@@ -113,7 +113,7 @@ export default function Navbar(props) {
                     <li>
                       <Link
                         href="/organization"
-                        class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
+                        class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Байгууллагууд</span>
                       </Link>

@@ -27,14 +27,14 @@ export default function HomeNews(second) {
       <div class="py-12">
         <div class="xl:container m-auto px-6 text-blue-700 md:px-12 xl:px-6">
           <div class="mb-12 space-y-2 text-center">
-            <h2 class="text-3xl font-bold text-blue-700 italic md:text-4xl dark:text-white">
+            <h2 class="text-3xl font-bold text-blue-700 italic md:text-4xl  ">
               #ОНЦЛОХ БУЛАН
             </h2>
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((el) => {
               return (
-                <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+                <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100   bg-opacity-50 shadow-2xl shadow-gray-600/10">
                   <div class="relative overflow-hidden rounded-xl">
                     <img
                       src={el.imageUrl}
