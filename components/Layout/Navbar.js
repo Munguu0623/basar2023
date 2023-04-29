@@ -65,20 +65,20 @@ export default function Navbar(props) {
                 <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                   <ul class="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Нүүр</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Амьтад</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link
@@ -89,57 +89,57 @@ export default function Navbar(props) {
                       </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLigh font-thin "
                       >
                         <span>Блог</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/organization"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Байгууллагууд</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/ads"
                         class="block md:px-4  font-thin transition hover:text-primary dark:hover:text-primaryLight"
                       >
                         <span>Зар </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span className="flex flex-nowrap"> Үйлчилгээ </span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
 
                 <div class="w-full space-y-2 border-primary/10 dark:border-gray-700 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
-                  <a
+                  <Link
                     href="/shop"
                     class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10 dark:focus:before:bg-primaryLight/10 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   >
                     <span class="relative text-sm font-semibold text-primary dark:text-primaryLight">
                       Дэлгүүр
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/"
                     class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary dark:before:bg-primaryLight before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   >
                     <span class="relative text-sm font-semibold text-black dark:text-gray-900">
                       Нэвтрэх
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
