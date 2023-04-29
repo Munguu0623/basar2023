@@ -3,10 +3,14 @@ import React from "react";
 // import appShrefre from "../../assets/images/footer_img/appshrefre.png";
 // import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Link from "next/link";
-
+import {AiFillFacebook} from 'react-icons/ai'
+import {AiFillInstagram} from 'react-icons/ai' 
+import {TfiHeadphoneAlt} from 'react-icons/tfi'
+import {AiFillTwitterCircle} from 'react-icons/ai'
+import {AiFillYoutube} from 'react-icons/ai'
 const Footer = () => {
   return (
-    <footer className="h-32rem w-full hidden lg:block font-Robohref text-xs">
+    <footer className="h-32rem  w-full hidden lg:block font-Robohref text-xs">
       <div className="flex justify-center items-center space-x-12 h-32 w-full bg-gradient-to-r  from-[#EFAB3E] to-[#ff834f] text-white">
         <div className="text-xl font-light">
           ЦАГ АЛДАЛГҮЙ МЭДЭЭЛЭЛ{" "}
@@ -21,7 +25,7 @@ const Footer = () => {
           </buthrefn>
         </div>
       </div>
-      <div className="h-full p-8 mx-auhref max-w-7xl flex justify-center items-center">
+      <div className="h-full p-8 mx-auto mx-auhref max-w-7xl flex justify-center items-center">
         <div className="grid grid-cols-6 xl:pl-14 py-6 text-[#2B363F] ">
           <div className="w-52">
             <div className="font-medium border-orange-500 border-l-2 pl-1 mb-2">
@@ -191,14 +195,46 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-span-2 border-slate-400 border-l-2 xl:pl-14 pl-8  w-[330px]">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between inline-flex pl-3">
               {/* <FontAwesomeIcon icon={solid("headset")} size="3x" /> */}
-              <p className="text-lg font-medium mx-4 font-Montserrat">
+              <a><TfiHeadphoneAlt size='2rem'/></a>
+              <p className="text-lg font-medium mx-4 font-Montserrat ">
                 7211-0737
               </p>
               <buthrefn className="lg:px-9 py-2 border text-[#9B9B9B] rounded-lg font-Montserrat">
                 Чатлах
               </buthrefn>
+              
+            </div>
+            < div className="inline-flex  pt-10 pl-2" >
+              
+                <a href="https://www.facebook.com/www.basar.mn"><AiFillFacebook size='3rem'  /></a>
+              
+            </div>
+            <div className="inline-flex pl-6">
+                         
+                <a href="/"><AiFillInstagram size='3rem' /></a>
+             
+            </div>
+            <div className="inline-flex pl-6">
+                         
+                <a href="/"><AiFillTwitterCircle size='3rem' /></a>
+             
+            </div>
+            <div className="inline-flex pl-6 ">
+                         
+                <a href="/"><AiFillYoutube size='3rem' /></a>
+             
+            </div>
+            <div className="inline-flex pt-6">
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              class="h-12 w-35 rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+              alt="..." />
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              class="h-12 w-35 pl-7 rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+              alt="..." />
             </div>
             {/* <div className="mt-12 mb-8">
               <ul className="flex justify-between">
@@ -213,7 +249,6 @@ const Footer = () => {
                     </div>
                   </Link>
                 </li>
-
                 <li>
                   <div className="p-3 rounded-lg">
                     <FontAwesomeIcon
@@ -223,7 +258,6 @@ const Footer = () => {
                     />
                   </div>
                 </li>
-
                 <li>
                   <Link href="/">
                     <div className="p-3 rounded-lg">
@@ -235,7 +269,6 @@ const Footer = () => {
                     </div>
                   </Link>
                 </li>
-
                 <li>
                   <Link href="/">
                     <div className="py-3 rounded-lg">
@@ -258,7 +291,7 @@ const Footer = () => {
       </div>
 
       <div className="h-11 w-full bg-[#657C93] text-white text-[12px]  ">
-        <div className="flex max-w-7xl items-center justify-between mx-auhref py-1 p-4">
+        <div className="flex max-w-7xl  mx-auto items-center justify-between mx-auhref py-1 p-4">
           <p>All reserved by @basarmn</p>
           <ul className="flex">
             <li className="mx-6 my-2">

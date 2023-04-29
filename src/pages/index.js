@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import Navbar from "../../components/Layout/Navbar";
 import Cover from "../../components/Cover";
 import Service from "../../components/service";
@@ -9,7 +9,7 @@ import BasarZar from "../../components/BasarZar";
 import AppBanner from "../../components/AppBanner";
 import Animals from "../../components/Animals";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const { user, loading } = useAuth();

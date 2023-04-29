@@ -137,10 +137,10 @@ export default function Navbar(props) {
                   </ul>
                 </div>
 
-                <div class="w-full space-y-2 border-primary/10   flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
-                  <Link
+                <div class="w-full space-y-2 border-primary/10  flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
+                  <Link 
                     href="/"
-                    class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                    class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 rounded-full bg-white " 
                   >
                     <span class="relative text-sm font-semibold text-primary  ">
                       Дэлгүүр
@@ -161,7 +161,7 @@ export default function Navbar(props) {
                   ) : (
                     <Link
                       href="/login"
-                      className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                      className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 rounded-full bg-white"
                     >
                       <span className="relative text-sm font-semibold text-black  ">
                         Нэвтрэх{" "}
