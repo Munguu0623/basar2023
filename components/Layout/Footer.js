@@ -1,13 +1,11 @@
 import React from "react";
-// import playShrefre from "../../assets/images/footer_img/playshrefre.png";
-// import appShrefre from "../../assets/images/footer_img/appshrefre.png";
-// import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Link from "next/link";
-import {AiFillFacebook} from 'react-icons/ai'
-import {AiFillInstagram} from 'react-icons/ai' 
-import {TfiHeadphoneAlt} from 'react-icons/tfi'
-import {AiFillTwitterCircle} from 'react-icons/ai'
-import {AiFillYoutube} from 'react-icons/ai'
+import { AiFillFacebook } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="h-32rem  w-full hidden lg:block font-Robohref text-xs">
@@ -197,91 +195,85 @@ const Footer = () => {
           <div className="col-span-2 border-slate-400 border-l-2 xl:pl-14 pl-8  w-[330px]">
             <div className="flex items-center justify-between inline-flex pl-3">
               {/* <FontAwesomeIcon icon={solid("headset")} size="3x" /> */}
-              <a><TfiHeadphoneAlt size='2rem'/></a>
+              <a>
+                <TfiHeadphoneAlt size="2rem" />
+              </a>
               <p className="text-lg font-medium mx-4 font-Montserrat ">
-                7211-0737
+                98909811
               </p>
               <buthrefn className="lg:px-9 py-2 border text-[#9B9B9B] rounded-lg font-Montserrat">
                 Чатлах
               </buthrefn>
-              
             </div>
-            < div className="inline-flex  pt-10 pl-2" >
-              
-                <a href="/"><AiFillFacebook size='3rem'  /></a>
-              
-            </div>
-            <div className="inline-flex pl-6">
-                         
-                <a href="/"><AiFillInstagram size='3rem' /></a>
-             
+            {/* <div className="inline-flex  pt-10 pl-2">
+              <a href="/">
+                <AiFillFacebook size="3rem" />
+              </a>
             </div>
             <div className="inline-flex pl-6">
-                         
-                <a href="/"><AiFillTwitterCircle size='3rem' /></a>
-             
+              <a href="/">
+                <AiFillInstagram size="3rem" />
+              </a>
+            </div>
+            <div className="inline-flex pl-6">
+              <a href="/">
+                <AiFillTwitterCircle size="3rem" />
+              </a>
             </div>
             <div className="inline-flex pl-6 ">
-                         
-                <a href="/"><AiFillYoutube size='3rem' /></a>
-             
-            </div>
+              <a href="/">
+                <AiFillYoutube size="3rem" />
+              </a>
+            </div> */}
             <div className="inline-flex pt-6">
-            <img
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              class="h-12 w-35 rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-              alt="..." />
-            <img
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              class="h-12 w-35 pl-7 rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-              alt="..." />
+              <Image
+                src="/image/footerImage/playstore.png"
+                alt="..."
+                width={800}
+                height={600}
+                layout="responsive"
+                sizes="(max-width: 600px) 100vw, (max-width: 960px) 50vw, 900px"
+              />
+              <Image
+                src="/image/footerImage/appstore.png"
+                alt="..."
+                width={800}
+                height={600}
+                layout="responsive"
+                sizes="(max-width: 600px) 100vw, (max-width: 960px) 50vw, 800px"
+                className="ml-8"
+              />
             </div>
-            {/* <div className="mt-12 mb-8">
+            <div className="mt-12 mb-8">
               <ul className="flex justify-between">
                 <li>
                   <Link href="#" target="_blanck">
                     <div className="py-3 rounded-lg">
-                      <FontAwesomeIcon
-                        icon={brands("Facebook")}
-                        size="3x"
-                        className="hover:text-[#3b5998]"
-                      />
+                      <AiFillFacebook size="3rem" />
                     </div>
                   </Link>
                 </li>
                 <li>
                   <div className="p-3 rounded-lg">
-                    <FontAwesomeIcon
-                      icon={brands("Instagram")}
-                      size="3x"
-                      className="hover:text-[#bc2a8d]"
-                    />
+                    <AiFillYoutube size="3rem" />
                   </div>
                 </li>
                 <li>
                   <Link href="/">
                     <div className="p-3 rounded-lg">
-                      <FontAwesomeIcon
-                        icon={brands("Twitter")}
-                        size="3x"
-                        className="hover:text-[#00acee]"
-                      />
+                      <AiFillInstagram size="3rem" />
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
                     <div className="py-3 rounded-lg">
-                      <FontAwesomeIcon
-                        icon={brands("Youtube")}
-                        size="3x"
-                        className="hover:text-[#FF0000]"
-                      />
+                      <AiFillTwitterCircle size="3rem" />
                     </div>
                   </Link>
                 </li>
               </ul>
-            </div> */}
+            </div>
             <div className="flex justify-between">
               {/* <img className="h-10" src={playShrefre} alt="playshrefre" />
               <img className="h-10" src={appShrefre} alt="appshrefre" /> */}

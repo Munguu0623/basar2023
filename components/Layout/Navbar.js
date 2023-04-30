@@ -15,6 +15,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "../../firebase/useFireBaseAuth";
 import { FiMenu } from "react-icons/fi";
+import MobileFooter from "./MobileFooter";
 export default function Navbar(props) {
   const { user, loading, logOut } = useAuth();
   const [open, setOpen] = useState(false);
@@ -226,6 +227,7 @@ export default function Navbar(props) {
         </Row>
       </Content>
       <Footer />
+      <MobileFooter />
     </Layout>
   );
 }
