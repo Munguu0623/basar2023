@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "../../components/Layout/Navbar";
 import Cover from "../../components/Cover";
-import Service from "../../components/Service";
+import Services from "../../components/Service";
 import { useAuth } from "../../firebase/useFireBaseAuth";
 import HomeNews from "../../components/HomeNews";
 import HomeBlog from "../../components/HomeBlog";
@@ -18,7 +18,7 @@ export default function Home() {
         <Cover />
         <HomeNews />
         <Animals />
-        <Service />
+        <Services />
         <HomeBlog />
         <BasarZar />
         <AppBanner />
