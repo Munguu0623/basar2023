@@ -48,6 +48,7 @@ export default function Ads(second) {
     if (!isJpgOrPng) {
       return message.error("You can only upload JPG/PNG file!");
     }
+    console.log(info.file, "file");
     if (info.file.status == "done") {
       setLoading(true);
       const imageRef = ref(storage, file.name);
