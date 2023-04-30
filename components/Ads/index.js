@@ -57,7 +57,7 @@ export default function Ads(second) {
             .then((url) => {
               setLoading(false);
               setUrl(url);
-              console.log(url);
+
               message.success("Амжилттай хадгалагдлаа");
             })
             .catch((err) => {
@@ -109,7 +109,7 @@ export default function Ads(second) {
       querySnapshot.forEach((order) => {
         data.push({ ...order.data(), id: order.id });
       });
-      console.log(data);
+
       setDataSource(data.reverse());
     } catch (error) {
       console.error("An error occured", error);
