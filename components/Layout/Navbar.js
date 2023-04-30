@@ -16,6 +16,7 @@ import Link from "next/link";
 import { useAuth } from "../../firebase/useFireBaseAuth";
 import { FiMenu } from "react-icons/fi";
 import MobileFooter from "./MobileFooter";
+import { FaShoppingCart } from "react-icons/fa";
 export default function Navbar(props) {
   const { user, loading, logOut } = useAuth();
   const [open, setOpen] = useState(false);
@@ -138,14 +139,15 @@ export default function Navbar(props) {
                 </div>
 
                 <div class="w-full space-y-2 border-primary/10   flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
-                  <Link
-                    href="/shop"
-                    class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
-                  >
-                    <span class="relative text-sm font-semibold text-primary  ">
-                      Дэлгүүр
-                    </span>
+                  <Link className="ml-2" href="/shop">
+                    <button className="bg-blueMain text-white duration-500 hover:bg-sky-700 rounded-3xl text-xs font-Roboto relative mr-4 lg:flex hidden ">
+                      <div className="hidden lg:h-8 lg:w-8 bg-sky-600 lg:flex lg:items-center lg:justify-center rounded-full">
+                        <FaShoppingCart />
+                      </div>
+                      <span className=" pr-3 pl-2 mt-2">ДЭЛГҮҮР</span>
+                    </button>
                   </Link>
+
                   {user ? (
                     <Dropdown
                       menu={{
@@ -159,14 +161,19 @@ export default function Navbar(props) {
                       />
                     </Dropdown>
                   ) : (
-                    <Link
-                      href="/login"
-                      className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
-                    >
-                      <span className="relative text-sm font-semibold text-black  ">
-                        Нэвтрэх{" "}
-                      </span>
+                    <Link href="/login">
+                      <button className="bg-btnOrange text-white duration-500 px-4 py-2 mr-4 hover:bg-orange-600 rounded-3xl text-xs font-Roboto lg:flex hidden ">
+                        НЭВТРЭХ
+                      </button>
                     </Link>
+                    // <Link
+                    //   href="/login"
+                    //   className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                    // >
+                    //   <span className="relative text-sm font-semibold text-black  ">
+                    //     Нэвтрэх{" "}
+                    //   </span>
+                    // </Link>
                   )}
                 </div>
               </div>
