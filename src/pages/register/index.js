@@ -35,6 +35,7 @@ export default function Login(second) {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, provider);
+      router.push("/");
     } catch (error) {
       console.error("An error occured", error);
     }
@@ -42,6 +43,7 @@ export default function Login(second) {
   const signInWithFacebook = async () => {
     try {
       await signInWithPopup(auth, fbProvider);
+      router.push("/");
     } catch (error) {
       console.error("An error occured", error);
     }
@@ -66,6 +68,7 @@ export default function Login(second) {
         displayName: username,
       });
       setAuthUser({ ...user, username });
+      router.push("/");
     } catch (error) {
       <alert>{error}</alert>;
       console.error("An error occured", error);

@@ -208,7 +208,7 @@ const Footer = () => {
             </div>
             < div className="inline-flex  pt-10 pl-2" >
               
-                <a href="https://www.facebook.com/www.basar.mn"><AiFillFacebook size='3rem'  /></a>
+                <a href="/"><AiFillFacebook size='3rem'  /></a>
               
             </div>
             <div className="inline-flex pl-6">

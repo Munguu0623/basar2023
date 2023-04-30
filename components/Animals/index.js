@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function Animals(second) {
   return (
     <>
@@ -8,10 +9,12 @@ export default function Animals(second) {
         </h1>
         <div className="flex flex-wrap">
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-20 mt-12 ml-16 sm:ml-40 sm:h-24 sm:mt-8   md:ml-32 xl:h-28 xl:ml-44 xl:mt-4 absolute z-20 flex shrink-0"
               src="/image/animals/dog.png"
               alt="dog"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -24,10 +27,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-24 ml-20 mt-8 sm:ml-44  md:ml-36 xl:ml-52 xl:h-28 xl:mt-4 absolute z-20"
               src="/image/animals/cat.png"
               alt="cat"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -40,10 +45,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-28 ml-20 mt-4 sm:ml-44  md:ml-36 xl:ml-48 xl:h-32 xl:mt-0 absolute z-20"
               src="/image/animals/rabbit.png"
               alt="rabbit"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -56,10 +63,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-20 ml-20 mt-12 sm:ml-44 sm:h-24 sm:mt-8  md:ml-36 xl:h-28 xl:mt-4 xl:ml-48 absolute z-20"
               src="/image/animals/bird.png"
               alt="bird"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -72,10 +81,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-12  ml-16 mt-8 sm:h-16  sm:mt-7 sm:ml-36  md:ml-28 xl:h-20 xl:ml-36 absolute z-20"
               src="/image/animals/turtle.png"
               alt="turtle"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -88,10 +99,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-20 ml-16 mt-6 sm:h-24 sm:ml-44 md:h-28 md:ml-28 md:mt-2 xl:h-32 xl:ml-40 absolute z-20"
               src="/image/animals/fish.png"
               alt="fish"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -104,10 +117,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className=" h-20  ml-14 sm:h-24 sm:ml-40 md:h-24 md:ml-28  xl:h-28 xl:ml-44 xl:mt-4 absolute z-20"
               src="/image/animals/zaraa.png"
               alt="zaraa"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"
@@ -120,10 +135,12 @@ export default function Animals(second) {
           </div>
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
-            <img
+            <Image
               className="h-20 ml-16  sm:h-24 sm:ml-44 md:h-24 md:ml-36  xl:h-28 xl:ml-44 xl:mt-4 absolute z-20"
               src="/image/animals/humster.png"
               alt="usan gahai"
+              width={100}
+              height={500}
             />
             <Link
               href="/animals"

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space, Form } from "antd";
 const { Search } = Input;
@@ -27,27 +27,47 @@ export default function Cover(second) {
               Амьтад хайртай бүх хүнд зориулагдсан
               <div class="  text-btnOrange">цогц флатпорм</div>
             </h1>
-            <p class="mt-8 text-gray-600 ">
-              БАСАР бол МУ-д амьдарч байгаа гэрийн тэжээвэр амьтдын нэгээхэн
-              төлөөл юм. Тэрээр амьтанд хайртай амьтан тэжээдэг бүх хүмүүстэй
-              үнэнч байх найз нь байх хүсэлтэй.
-            </p>
-            <div>
-              <Form action="" class="w-full mt-8">
-                <Search
-                  placeholder="хайх утгаа оруулна уу"
-                  enterButton="хайх"
-                  // className=" hover:bg-btnOrange/80"
-                  style={{
-                    backgroundColor: "#33A0FF",
-                    color: "white",
-                    borderRadius: "8px",
-                  }}
-                  size="large"
-                  onSearch={onSearch}
-                  enterButtonStyle={{ ":hover": { backgroundColor: "red" } }}
-                />
-              </Form>
+            <div className="mt-20">
+              <form className="  md:mt-0 ">
+                <label
+                  for="хайх утгаа оруулна уу"
+                  class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >
+                  хайх утгаа оруулна уу
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="хайх утгаа оруулна уу"
+                    id="search"
+                    class="block w-full p-4 pl-10 text-sm text-gray-900 border rounded-full  bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
+                    placeholder="хайх утгаа оруулна уу"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="text-white absolute right-2.5 bottom-1.5 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full   text-sm p-3  "
+                  >
+                    <AiOutlineArrowRight className="text-lg" />
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           <div class="overflow-hidden w-full lg:w-7/12  relative">
