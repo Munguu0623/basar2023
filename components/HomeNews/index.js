@@ -13,14 +13,15 @@ export default function HomeNews({ post }) {
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {post.data.map((el, index) => {
+              console.log(el.ImageUrl);
               return (
                 <div
                   key={index}
                   class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100   bg-opacity-50 shadow-2xl shadow-gray-600/10"
                 >
                   <div class="relative overflow-hidden rounded-xl">
-                    <Image
-                      src="/image/news/cover_img_03.png"
+                    <img
+                      src={`${el.attributes.ImageUrl}`}
                       key={index}
                       alt="art cover"
                       width={1000}
