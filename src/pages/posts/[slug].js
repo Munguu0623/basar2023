@@ -1,10 +1,11 @@
 import HomeNews from "../../../components/HomeNews";
 import axios from "axios";
 import Navbar from "../../../components/Layout/Navbar";
+import ReactMarkdown from "react-markdown";
 export default function Post({ post }) {
   return (
     <Navbar>
-      <div className=" mt-10 md:mx-96 mx-10">
+      <div className=" mt-10  max-w-4xl mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <h1 className="text-blue-500 text-lg">Мэдээ</h1>
@@ -21,10 +22,15 @@ export default function Post({ post }) {
             </h1>
           </div>
         </div>
-        <h1 className=" md:text-5xl text-2xl text-gray-800 mt-10">
+        <h1 className=" md:text-5xl text-2xl text-gray-800 mt-10 mb-20">
           {post.data.attributes.title}
         </h1>
-        <p className=" leading-relaxed mt-36"> {post.data.attributes.data}</p>
+        <ReactMarkdown
+          children={post.data.attributes.data.replaceAll(
+            "](/",
+            "](http://103.168.56.133:1337/"
+          )}
+        />
       </div>
     </Navbar>
   );
