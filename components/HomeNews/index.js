@@ -19,8 +19,8 @@ export default function HomeNews({ post }) {
                   class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100   bg-opacity-50 shadow-2xl shadow-gray-600/10"
                 >
                   <div class="relative overflow-hidden rounded-xl">
-                    <Image
-                      src="/image/news/cover_img_03.png"
+                    <img
+                      src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg"
                       key={index}
                       alt="art cover"
                       width={1000}
