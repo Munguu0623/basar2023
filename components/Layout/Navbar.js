@@ -24,6 +24,19 @@ export default function Navbar(props) {
   const onClose = () => {
     setOpen(false);
   };
+  const items = [
+    {
+      label: <p>{user?.username}</p>,
+      key: "0",
+    },
+    {
+      type: "divider",
+    },
+    {
+      label: <p onClick={logOut}>Гарах</p>,
+      key: "1",
+    },
+  ];
   return (
     <Layout>
       <header>
@@ -107,7 +120,7 @@ export default function Navbar(props) {
                     <li>
                       <Link
                         href="/ads"
-                        class="block md:px-4  font-thin transition hover:text-primary dark:hover:text-primaryLight"
+                        class="block md:px-4  font-thin transition hover:text-primary  "
                       >
                         <span>Зар </span>
                       </Link>
@@ -132,14 +145,28 @@ export default function Navbar(props) {
                       Дэлгүүр
                     </span>
                   </Link>
-                  <Link
-                    href="/login"
-                    class="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
-                  >
-                    <span class="relative text-sm font-semibold text-black  ">
-                      Нэвтрэх
-                    </span>
-                  </Link>
+                  {user ? (
+                    <Dropdown
+                      menu={{
+                        items,
+                      }}
+                    >
+                      <Avatar
+                        className=""
+                        size="default"
+                        src={user?.photoURL}
+                      />
+                    </Dropdown>
+                  ) : (
+                    <Link
+                      href="/login"
+                      className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary   before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+                    >
+                      <span className="relative text-sm font-semibold text-black  ">
+                        Нэвтрэх{" "}
+                      </span>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
