@@ -104,7 +104,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/blog"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Блог</span>
@@ -128,7 +128,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/servic"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span className="flex flex-nowrap"> Үйлчилгээ </span>
@@ -207,7 +207,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/blog"
               class="block md:px-4 transition hover:text-primary   font-thin "
             >
               <span>Блог</span>
@@ -231,7 +231,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/servic"
               class="block md:px-4 transition hover:text-primary   font-thin "
             >
               <span className="flex flex-nowrap"> Үйлчилгээ </span>
