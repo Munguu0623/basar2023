@@ -25,8 +25,13 @@ import {
   where,
 } from "firebase/firestore";
 import dayjs from "dayjs";
+import { useAuth } from "../../firebase/useFireBaseAuth";
+import { useRouter } from "next/router";
 
 export default function Ads(second) {
+  const { user } = useAuth();
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -72,6 +77,7 @@ export default function Ads(second) {
       ...fieldValues,
       image: url,
       date: dayjs().format("YYYY-MM-DD"),
+      username: user?.username,
     };
     try {
       const docRef = await addDoc(collection(db, "service"), values);
@@ -291,11 +297,14 @@ export default function Ads(second) {
                 </div>
 
                 <button
-                  onClick={() => setOpen(true)}
+                  onClick={() => {
+                    if (!user) router.push("/login");
+                    else setOpen(true);
+                  }}
                   className="py-2 px-6 bg-blue-500 text-white rounded-lg md:ml-20
               "
                 >
-                  зар нэмэх
+                  Зар нэмэх
                 </button>
               </div>
             </div>
@@ -331,12 +340,14 @@ export default function Ads(second) {
                           >
                             {category(item.category)}
                           </Link>
-                          <Link
-                            href="#"
-                            className="px-3 py-1  bg-red-500 text-white hover:text-white rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary  "
-                          >
-                            VIP
-                          </Link>
+                          {i % 2 == 0 && (
+                            <Link
+                              href="/"
+                              className="px-3 py-1  bg-red-500 text-white hover:text-white rounded-full border border-gray-100 text-sm font-medium text-primary transition duration-300 hover:border-transparent hover:bg-primary  "
+                            >
+                              VIP
+                            </Link>
+                          )}
                         </div>
                       </div>
                     </div>
