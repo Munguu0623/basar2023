@@ -35,7 +35,7 @@ export default function Organization(second) {
                     />
                   </div>
                   <div class="sm:p-2 sm:pl-0 sm:w-4/6">
-                    <span class="mt-4 mb-2 inline-block font-medium text-gray-400 dark:text-gray-500 sm:mt-0">
+                    <span class="mt-4 mb-2 inline-block font-medium text-gray-400   sm:mt-0">
                       Mar 27 2023
                     </span>
                     <h3 class="text-2xl font-semibold text-gray-800  ">
