@@ -24,7 +24,7 @@ export default function Cover() {
         <div class="relative lg:flex lg:items-center lg:gap-12">
           <div class="text-center lg:text-left md:mt-12 lg:mt-0 sm:w-10/12 md:w-2/3 sm:mx-auto lg:mr-auto lg:w-6/12">
             <h1 class=" text-AboutTitle font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl ">
-              Амьтад хайртай бүх хүнд зориулагдсан
+              Амьтанд хайртай бүх хүнд зориулагдсан
               <div class="  text-btnOrange">цогц платформ </div>
             </h1>
             <div className="mt-20">
