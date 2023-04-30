@@ -61,7 +61,7 @@ export default function Ads(second) {
                 className="py-2 px-6 bg-blue-500 text-white rounded-lg md:ml-20
               "
               >
-                зар нэмэх
+                <Link href="/ads/add"> зар нэмэх</Link>
               </button>
             </div>
           </div>
