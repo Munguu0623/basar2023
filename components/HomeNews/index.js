@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function HomeNews(second) {
   const data = [
     {
@@ -32,17 +33,21 @@ export default function HomeNews(second) {
             </h2>
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((el) => {
+            {data.map((el, index) => {
+              console.log(index, "this is index");
               return (
-                <div class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100   bg-opacity-50 shadow-2xl shadow-gray-600/10">
+                <div
+                  key={index}
+                  class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100   bg-opacity-50 shadow-2xl shadow-gray-600/10"
+                >
                   <div class="relative overflow-hidden rounded-xl">
-                    <img
-                      src={el.imageUrl}
+                    <Image
+                      src="/image/news/cover_img_03.png"
+                      key={index}
                       alt="art cover"
-                      loading="lazy"
-                      width="1000"
-                      height="667"
-                      class="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                      width={1000}
+                      height={667}
+                      className="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div class="mt-6 relative">

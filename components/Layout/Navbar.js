@@ -65,20 +65,20 @@ export default function Navbar(props) {
                 <div class="text-gray-600   lg:pr-4">
                   <ul class="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Нүүр</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Амьтад</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link
@@ -89,36 +89,36 @@ export default function Navbar(props) {
                       </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Блог</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/organization"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span>Байгууллагууд</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
-                        class="block md:px-4  font-thin transition hover:text-primary  "
+                      <Link
+                        href="/ads"
+                        class="block md:px-4  font-thin transition hover:text-primary dark:hover:text-primaryLight"
                       >
                         <span>Зар </span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="/"
                         class="block md:px-4 transition hover:text-primary   font-thin "
                       >
                         <span className="flex flex-nowrap"> Үйлчилгээ </span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -195,7 +195,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/ads"
               class="block md:px-4  font-thin transition hover:text-primary  "
             >
               <span>Зар </span>
