@@ -2,18 +2,19 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import Navbar from "../../../components/Layout/Navbar";
+import dayjs from "dayjs";
 
 export default function News({ post }) {
   const router = useRouter();
 
   return (
     <Navbar>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mt-20">
           <div className="flex items-center">
             <h1 className="text-blue-500 text-lg">Мэдээ</h1>
             <h1 className=" text-gray-500 ml-4  text-base  font-light">
-              4 сарын 30, 2023
+              {dayjs(post.attributes.publishedAt).format("YYYY-MM-DD")}
             </h1>
           </div>
           <div>
@@ -28,11 +29,12 @@ export default function News({ post }) {
         <h1 className=" md:text-5xl text-2xl text-gray-800 mt-10 mb-20">
           {post.attributes.title}
         </h1>
+
         <ReactMarkdown
-          className="mb-20"
-          children={post.attributes.data.replace(
+          className="mb-16"
+          children={post.attributes.data.replaceAll(
             "](/",
-            "](http://103.168.56.133:1337/"
+            "](//103.168.56.133:1337/"
           )}
         />
       </div>
@@ -41,11 +43,9 @@ export default function News({ post }) {
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(params.slug, "slug");
   const { data } = await axios.get(
     `http://103.168.56.133:1337/api/blogs/${params.slug}`
   );
-  console.log(data, "dataaaaaaqa");
   return {
     props: {
       post: data.data,
@@ -62,7 +62,6 @@ export const getStaticPaths = async () => {
     },
   }));
   // var dsa = slug.toString()
-  console.log(slug, "this is slug");
   return {
     paths: slug,
     fallback: false,

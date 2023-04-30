@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 export default function HomeNews({ post }) {
-  console.log(post, "news home");
   return (
     <div className="mt-16">
       <div class="py-12">
@@ -13,7 +12,6 @@ export default function HomeNews({ post }) {
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {post.data.map((el, index) => {
-              console.log(el.ImageUrl);
               return (
                 <div
                   key={index}

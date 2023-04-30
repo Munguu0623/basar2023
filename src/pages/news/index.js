@@ -28,9 +28,9 @@ export default function News({ allBlogs }) {
               className="hover:text-white transform hover:scale-105 transition-all duration-500 ease-in-out flex flex-col"
             >
               <div className="h-64 w-112">
-                <Image
+                <img
                   className="h-72 w-120 rounded-2xl"
-                  //   src={this.props.news.photo}
+                  src={allBlogs[0].attributes.ImageUrl}
                   alt="cover_Image_01"
                 />
                 <button className="my-6 text-sm uppercase z-10 px-2 py-1 bg-btnSmColor rounded-full">
@@ -61,9 +61,10 @@ export default function News({ allBlogs }) {
                   className="transform hover:scale-105 transition-all duration-500 ease-in-out flex flex-row hover:text-white"
                 >
                   <div className="relative md:h-36 md:w-44  h-28 w-36">
-                    <Image
+                    <img
                       className="md:h-36 md:w-44 h-24 w-32 rounded-2xl"
-                      //  src={this.props.news.photo} alt="cover_Image_01"
+                      src={el.attributes.ImageUrl}
+                      alt="alt"
                     />
                     <button className="absolute  lg:text-sm hover:text-white text-xs md:bottom-2 md:right-2 bottom-5 right-5 uppercase z-10 md:px-2 md:py-1 p-1 bg-btnSmColor rounded-full">
                       МЭДЭЭ

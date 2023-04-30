@@ -50,7 +50,6 @@ export default function Login(second) {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/");
     } catch (error) {
-      console.log(JSON.stringify(error));
       if (
         error.code == "auth/invalid-email" ||
         error.code == "auth/wrong-password"

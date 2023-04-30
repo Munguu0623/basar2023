@@ -28,7 +28,6 @@ export default function useFirebaseAuth() {
       setAuthUser(null);
       setLoading(false);
     } else {
-      console.log(authState, "eeeee");
       setAuthUser({
         uid: authState.uid,
         email: authState.email,
