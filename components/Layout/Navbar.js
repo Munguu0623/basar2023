@@ -75,7 +75,7 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        href="/animals"
                         class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Амьтад</span>
@@ -164,7 +164,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/animals"
               class="block md:px-4 transition hover:text-primary   font-thin "
             >
               <span>Амьтад</span>

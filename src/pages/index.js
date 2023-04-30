@@ -14,14 +14,15 @@ import { BsScissors, BsFillCalendarWeekFill } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
 
-export default function Home() {
+export default function Home({ news }) {
   const { user, loading } = useAuth();
 
+  console.log(news, "hi sain uu blog");
   return (
     <>
       <Navbar>
         <Cover />
-        <HomeNews />
+        <HomeNews post={news} />
         <Animals />
         <section
           className="mt-36 w-full h-[30rem] sm:h-96 bg-bgServiceColor flex flex-col justify-center
@@ -104,4 +105,15 @@ export default function Home() {
       </Navbar>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("http://103.168.56.133:1337/api/news");
+  const news = await res.json();
+
+  return {
+    props: {
+      news,
+    },
+  };
 }
