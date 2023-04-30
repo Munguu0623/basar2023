@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function BasarZar(second) {
   return (
     <div>
-      <div className=" lg:flex">
+      <div className=" lg:flex hidden md:visible md:flex">
         <div className=" lg:w-1/2 md:h-96 bg-gradient-to-r from-Zaryellow1 to-Zaryellow2 relative ">
           <h1 className=" text-BigTextColor text-3xl xl:text-6xl md:text-6xl sm:text-5xl lg:text-5xl absolute font-medium w-44 lg:ml-24 sm:mt-16 sm:ml-96 ml-10 mt-9">
             ҮРЧИЛГЭЭ & ЗАР

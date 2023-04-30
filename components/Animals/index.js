@@ -13,7 +13,7 @@ export default function Animals(second) {
               className="h-20 mt-12 ml-16 sm:ml-40 sm:h-24 sm:mt-8   md:ml-32 xl:h-28 xl:ml-44 xl:mt-4 absolute z-20 flex shrink-0"
               src="/image/animals/dog.png"
               alt="dog"
-              width={100}
+              width={90}
               height={500}
             />
             <Link
@@ -28,10 +28,10 @@ export default function Animals(second) {
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
             <Image
-              className="h-24 ml-20 mt-8 sm:ml-44  md:ml-36 xl:ml-52 xl:h-28 xl:mt-4 absolute z-20"
+              className="h-24 ml-[4.5rem] mt-8 sm:ml-44  md:ml-36 xl:ml-52 xl:h-28 xl:mt-4 absolute z-20"
               src="/image/animals/cat.png"
               alt="cat"
-              width={100}
+              width={80}
               height={500}
             />
             <Link
@@ -64,17 +64,17 @@ export default function Animals(second) {
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
             <Image
-              className="h-20 ml-20 mt-12 sm:ml-44 sm:h-24 sm:mt-8  md:ml-36 xl:h-28 xl:mt-4 xl:ml-48 absolute z-20"
+              className="h-20 ml-20 mt-12 sm:ml-40 sm:h-24 sm:mt-8  md:ml-36 xl:h-28 xl:mt-4 xl:ml-44 absolute z-20"
               src="/image/animals/bird.png"
               alt="bird"
-              width={100}
+              width={80}
               height={500}
             />
             <Link
               href="/animals"
               className="bg-gradient-to-b from-BirdColor1 to-BirdColor2 z-10 w-full mt-8 mb-0 mx-4 rounded-2xl"
             >
-              <h1 className="font-bold md:text-2xl text-indigo-900 absolute mt-12 ml-2">
+              <h1 className="font-bold md:text-2xl text-indigo-900 absolute mt-12 ">
                 Шувуу
               </h1>
             </Link>
@@ -82,7 +82,7 @@ export default function Animals(second) {
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
             <Image
-              className="h-12  ml-16 mt-8 sm:h-16  sm:mt-7 sm:ml-36  md:ml-28 xl:h-20 xl:ml-36 absolute z-20"
+              className="h-12  ml-16 mt-8 sm:h-16  sm:mt-7 sm:ml-36  md:ml-28 xl:h-20 xl:ml-56 absolute z-20"
               src="/image/animals/turtle.png"
               alt="turtle"
               width={100}
@@ -100,7 +100,7 @@ export default function Animals(second) {
 
           <div className="2xl:w-1/4 lg:w-1/3  h-32  flex transform hover:scale-105 transition-all duration-500 ease-in-out w-1/2">
             <Image
-              className="h-20 ml-16 mt-6 sm:h-24 sm:ml-44 md:h-28 md:ml-28 md:mt-2 xl:h-32 xl:ml-40 absolute z-20"
+              className="h-20 ml-14 mt-6 sm:h-24 sm:ml-44 md:h-28 md:ml-28 md:mt-2 xl:h-32 xl:ml-40 absolute z-20"
               src="/image/animals/fish.png"
               alt="fish"
               width={100}

@@ -1,28 +1,7 @@
 import Image from "next/image";
-export default function HomeNews(second) {
-  const data = [
-    {
-      title:
-        "  Б.ТЭМҮҮЛЭН: АМЬТАН ТЭЖЭЭНЭ ГЭДЭГ НЬ ТУХАЙН АМЬТНЫГ ХАЙРЛАНА   ГЭСЭН ҮГ",
-      description:
-        "    “Momentomoon” хуудасны хөтлөгч Б.Тэмүүлэнтэй уулзаж ярилцлаа. Тэр бага наснаасаа эхлээд амьтадтай ойр өссөн нэгэн...",
-      imageUrl: "https://montsame.mn/files/5ee866cbc77fb.jpeg",
-    },
-    {
-      title:
-        "  Б.ТЭМҮҮЛЭН: АМЬТАН ТЭЖЭЭНЭ ГЭДЭГ НЬ ТУХАЙН АМЬТНЫГ ХАЙРЛАНА   ГЭСЭН ҮГ",
-      description:
-        "    “Momentomoon” хуудасны хөтлөгч Б.Тэмүүлэнтэй уулзаж ярилцлаа. Тэр бага наснаасаа эхлээд амьтадтай ойр өссөн нэгэн...",
-      imageUrl: "https://montsame.mn/files/5ee866cbc77fb.jpeg",
-    },
-    {
-      title:
-        "  Б.ТЭМҮҮЛЭН: АМЬТАН ТЭЖЭЭНЭ ГЭДЭГ НЬ ТУХАЙН АМЬТНЫГ ХАЙРЛАНА   ГЭСЭН ҮГ",
-      description:
-        "    “Momentomoon” хуудасны хөтлөгч Б.Тэмүүлэнтэй уулзаж ярилцлаа. Тэр бага наснаасаа эхлээд амьтадтай ойр өссөн нэгэн...",
-      imageUrl: "https://montsame.mn/files/5ee866cbc77fb.jpeg",
-    },
-  ];
+import Link from "next/link";
+export default function HomeNews({ post }) {
+  console.log(post, "news home");
   return (
     <div className="mt-16">
       <div class="py-12">
@@ -33,8 +12,7 @@ export default function HomeNews(second) {
             </h2>
           </div>
           <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((el, index) => {
-              console.log(index, "this is index");
+            {post.data.map((el, index) => {
               return (
                 <div
                   key={index}
@@ -51,13 +29,15 @@ export default function HomeNews(second) {
                     />
                   </div>
                   <div class="mt-6 relative">
-                    <h3 class=" text-sm font-semibold text-gray-800 ">
-                      {el.title}
+                    <h3 class=" text-xl font-semibold text-gray-800 ">
+                      {el.attributes.title}
                     </h3>
-                    <p class="mt-6 mb-8 text-gray-600 ">{el.description}</p>
-                    <a class="inline-block" href="#">
+                    <p class="mt-6 mb-8 text-gray-600 ">
+                      {el.attributes.description}
+                    </p>
+                    <Link class="inline-block" href={`/posts/${el.id}`}>
                       <span class="text-primary">дэлгэрэнгүй</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );

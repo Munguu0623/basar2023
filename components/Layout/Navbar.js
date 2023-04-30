@@ -15,6 +15,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "../../firebase/useFireBaseAuth";
 import { FiMenu } from "react-icons/fi";
+import MobileFooter from "./MobileFooter";
 export default function Navbar(props) {
   const { user, loading, logOut } = useAuth();
   const [open, setOpen] = useState(false);
@@ -87,8 +88,8 @@ export default function Navbar(props) {
                     </li>
                     <li>
                       <Link
-                        href="/"
-                        class="block md:px-4 transition hover:text-primary   font-thin "
+                        href="/animals"
+                        class="block md:px-4 transition hover:text-primary dark:hover:text-primaryLight font-thin "
                       >
                         <span>Амьтад</span>
                       </Link>
@@ -190,7 +191,7 @@ export default function Navbar(props) {
           </li>
           <li>
             <Link
-              href="/"
+              href="/animals"
               class="block md:px-4 transition hover:text-primary   font-thin "
             >
               <span>Амьтад</span>
@@ -253,6 +254,7 @@ export default function Navbar(props) {
         </Row>
       </Content>
       <Footer />
+      <MobileFooter />
     </Layout>
   );
 }

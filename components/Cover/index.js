@@ -11,7 +11,7 @@ const suffix = (
     }}
   />
 );
-export default function Cover(second) {
+export default function Cover() {
   const onSearch = (value) => console.log(value);
 
   return (
