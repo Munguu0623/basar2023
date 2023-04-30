@@ -49,7 +49,7 @@ export default function Ads(second) {
       return message.error("You can only upload JPG/PNG file!");
     }
     console.log(info.file, "file");
-    if (info.file.status == "done") {
+    if (info.file.status == "done" || info.file.status == "error") {
       setLoading(true);
       const imageRef = ref(storage, file.name);
       uploadBytes(imageRef, file)
