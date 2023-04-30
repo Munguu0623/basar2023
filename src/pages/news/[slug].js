@@ -20,7 +20,7 @@ export default function News({ post }) {
           className="mb-16"
           children={post.attributes.data.replaceAll(
             "](/",
-            "](http://103.168.56.133:1337/"
+            "](//103.168.56.133:1337/"
           )}
         />
       </div>
